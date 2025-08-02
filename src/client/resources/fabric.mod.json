@@ -1,0 +1,27 @@
+{
+  "schemaVersion": 1,
+  "id": "firstmod",
+  "version": "1.0.0",
+  "name": "firstMod",
+  "description": "",
+  "authors": ["Shaurmabratiish"],
+  "contact": {},
+  "license": "All-Rights-Reserved",
+  "icon": "assets/firstmod/icon.png",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "noobsdev.firstmod.FirstmodClient",
+      "noobsdev.firstmod.client.EventListener",
+      "noobsdev.firstmod.client.CommandListener"
+    ]
+  },
+  "mixins": [
+    "firstmod.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.20.4"
+  }
+}
