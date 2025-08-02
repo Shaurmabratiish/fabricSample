@@ -1,0 +1,8 @@
+{
+  "modmenu.nameTranslation": "FirstMod",
+  "key.firstmod.give_item_text": "Выдать Текст",
+  "key.firstmod.give_item_number": "Выдать Число",
+  "key.firstmod.give_item_var": "Выдать Переменную",
+  "key.firstmod.other_action": "Сказать привет",
+  "category.firstmod": "Клавиши FirstMod"
+}

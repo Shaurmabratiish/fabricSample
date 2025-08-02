@@ -9,8 +9,6 @@ public class ChatCallbackEvent {
         ClientChatSendCallback.EVENT.register((event) -> {
             if (event.getMessage().equalsIgnoreCase("привет")) {
                 MinecraftClient.getInstance().player.sendMessage(Text.of("Привет от обработчика!"), false);
-            }else {
-                event.setCanceled(true);
             }
         });
     }

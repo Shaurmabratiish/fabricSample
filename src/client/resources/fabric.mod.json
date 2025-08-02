@@ -3,7 +3,7 @@
   "id": "firstmod",
   "version": "1.0.0",
   "name": "firstMod",
-  "description": "",
+  "description": "шо ти лиси плаке плаке",
   "authors": ["Shaurmabratiish"],
   "contact": {},
   "license": "All-Rights-Reserved",
@@ -13,7 +13,8 @@
     "client": [
       "noobsdev.firstmod.FirstmodClient",
       "noobsdev.firstmod.client.EventListener",
-      "noobsdev.firstmod.client.CommandListener"
+      "noobsdev.firstmod.client.CommandListener",
+      "noobsdev.firstmod.client.KeybindListener"
     ]
   },
   "mixins": [
