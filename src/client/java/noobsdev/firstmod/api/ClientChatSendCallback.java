@@ -2,14 +2,18 @@ package noobsdev.firstmod.api;
 
 import net.fabricmc.fabric.api.event.Event;
 import net.fabricmc.fabric.api.event.EventFactory;
+import noobsdev.firstmod.api.sub.ClientChatSendEvent;
 
 public interface ClientChatSendCallback {
     Event<ClientChatSendCallback> EVENT = EventFactory.createArrayBacked(ClientChatSendCallback.class,
-            (listeners) -> (message) -> {
+            (listeners) -> (event) -> {
                 for (ClientChatSendCallback listener : listeners) {
-                    listener.onChatMessage(message);
+                    listener.onChatMessage(event);
+                    if (event.isCanceled()) {
+                        break;
+                    }
                 }
             });
 
-    void onChatMessage(String message);
+    void onChatMessage(ClientChatSendEvent event);
 }

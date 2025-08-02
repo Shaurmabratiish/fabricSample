@@ -6,9 +6,11 @@ import noobsdev.firstmod.api.ClientChatSendCallback;
 
 public class ChatCallbackEvent {
     public static void register() {
-        ClientChatSendCallback.EVENT.register((message) -> {
-            if (message.equalsIgnoreCase("привет")) {
+        ClientChatSendCallback.EVENT.register((event) -> {
+            if (event.getMessage().equalsIgnoreCase("привет")) {
                 MinecraftClient.getInstance().player.sendMessage(Text.of("Привет от обработчика!"), false);
+            }else {
+                event.setCanceled(true);
             }
         });
     }
